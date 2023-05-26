@@ -7,6 +7,19 @@
 
 import Foundation
 
+/**
+ The Cat struct represents a cat in the Cat Gallery app.
+
+ It contains various properties that provide information about the cat, such as its breeds, categories, ID, URL, width, and height.
+
+ The Cat struct is Codable, meaning it can be encoded to and decoded from JSON format using the Codable protocol.
+
+ The struct also includes nested structs, Breed and Category, which represent the breed information and category information of the cat, respectively. The Breed struct contains properties like weight, ID, name, temperament, origin, and various other characteristics of the breed. The Category struct contains properties for the ID and name of the category.
+
+ This struct is designed to hold the data for a cat fetched from an external API and provide a structured representation of the cat's information within the Cat Gallery app.
+ */
+ 
+
 // MARK: - Cat
 struct Cat: Codable {
     let breeds: [Breed]

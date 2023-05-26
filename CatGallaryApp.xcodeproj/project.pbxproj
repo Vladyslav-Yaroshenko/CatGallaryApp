@@ -19,6 +19,9 @@
 		870777F62A1E4D290047FDA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870777F52A1E4D290047FDA8 /* Constants.swift */; };
 		870777F82A1E521E0047FDA8 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870777F72A1E521E0047FDA8 /* Cat.swift */; };
 		870777FB2A1E52E10047FDA8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870777FA2A1E52E10047FDA8 /* NetworkService.swift */; };
+		870778032A1F6F0B0047FDA8 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870778012A1F6F0B0047FDA8 /* PhotoCell.swift */; };
+		870778042A1F6F0B0047FDA8 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 870778022A1F6F0B0047FDA8 /* PhotoCell.xib */; };
+		870778062A1F6F800047FDA8 /* CatPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870778052A1F6F800047FDA8 /* CatPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		870777F52A1E4D290047FDA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		870777F72A1E521E0047FDA8 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		870777FA2A1E52E10047FDA8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		870778012A1F6F0B0047FDA8 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		870778022A1F6F0B0047FDA8 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		870778052A1F6F800047FDA8 /* CatPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 			children = (
 				870777D92A1E37640047FDA8 /* MainViewController.swift */,
 				870777F12A1E3E540047FDA8 /* MainViewController.xib */,
+				870778012A1F6F0B0047FDA8 /* PhotoCell.swift */,
+				870778022A1F6F0B0047FDA8 /* PhotoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				870777F72A1E521E0047FDA8 /* Cat.swift */,
+				870778052A1F6F800047FDA8 /* CatPhoto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +204,7 @@
 				870777DF2A1E37660047FDA8 /* Assets.xcassets in Resources */,
 				870777DD2A1E37640047FDA8 /* Main.storyboard in Resources */,
 				870777F22A1E3E540047FDA8 /* MainViewController.xib in Resources */,
+				870778042A1F6F0B0047FDA8 /* PhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +216,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				870777EC2A1E39530047FDA8 /* MainPresenter.swift in Sources */,
+				870778032A1F6F0B0047FDA8 /* PhotoCell.swift in Sources */,
 				870777F82A1E521E0047FDA8 /* Cat.swift in Sources */,
+				870778062A1F6F800047FDA8 /* CatPhoto.swift in Sources */,
 				870777FB2A1E52E10047FDA8 /* NetworkService.swift in Sources */,
 				870777DA2A1E37640047FDA8 /* MainViewController.swift in Sources */,
 				870777D62A1E37640047FDA8 /* AppDelegate.swift in Sources */,
