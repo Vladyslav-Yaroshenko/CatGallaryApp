@@ -14,6 +14,7 @@ import UIKit
  */
 protocol Builder {
     static func createMainModule() -> UIViewController
+    static func createDetailModule(cat: Cat?, photo: CatPhoto?) -> UIViewController
 }
 
 /**
@@ -21,6 +22,15 @@ protocol Builder {
  It provides the implementation for creating the modules in the application.
  */
 class ModuleBuilder: Builder {
+ 
+    static func createDetailModule(cat: Cat?, photo: CatPhoto?) -> UIViewController {
+        let view = DetailViewController()
+        let networkService = NetworkService()
+        let presenter = DetailPresenter(view: view, networkService: networkService, cat: cat, photo: photo)
+        view.presenter = presenter
+        return view
+    }
+    
     static func createMainModule() -> UIViewController {
        
         let view =  MainViewController()
