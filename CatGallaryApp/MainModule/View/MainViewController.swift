@@ -164,6 +164,17 @@ extension MainViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photo = presenter.catPhotos?[indexPath.row]
+        let cat = presenter.cats?[indexPath.row]
+        
+        let detailVC = ModuleBuilder.createDetailModule(cat: cat, photo: photo)
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+}
+
 // MARK: - MainViewProtocol
 extension MainViewController: MainViewProtocol {
     

@@ -36,6 +36,7 @@ class DetailViewController: UIViewController {
 extension DetailViewController: DetailViewProtocol {
     func setCatPhoto(image: CatPhoto?) {
         self.imageView.image = image?.image
+        self.imageView.contentMode = .scaleAspectFill
     }
     
     
