@@ -52,9 +52,18 @@ class DetailViewController: UIViewController {
     }
     
     @objc private func shareButtonTapped() {
-            
+        guard let image = imageView.image else { return }
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        
+        if let popoverPresentationController = activityViewController.popoverPresentationController {
+            if let sourceView = shareButton ?? view {
+                popoverPresentationController.sourceView = sourceView
+                popoverPresentationController.sourceRect = sourceView.bounds
+                popoverPresentationController.permittedArrowDirections = [.any]
+            }
+        }
+        present(activityViewController, animated: true, completion: nil)
     }
-
 }
 
 extension DetailViewController: DetailViewProtocol {
