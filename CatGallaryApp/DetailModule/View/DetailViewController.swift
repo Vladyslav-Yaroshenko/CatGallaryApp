@@ -11,7 +11,6 @@ class DetailViewController: UIViewController {
 
     var imageView: UIImageView!
     var shareButton: UIButton!
-    
     var presenter: DetailViewPresenterProtocol!
     
     override func viewDidLoad() {
@@ -19,14 +18,14 @@ class DetailViewController: UIViewController {
 
         setupImageView()
         setupShareButton()
+        setupConstraints()
         presenter.setPhoto()
     }
 
 
     private func setupImageView() {
-        let width = view.frame.width
-        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: width))
-        imageView.center = view.center
+        imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
     }
     
@@ -40,15 +39,20 @@ class DetailViewController: UIViewController {
         shareButton.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         shareButton.setTitleColor(color, for: .normal)
         shareButton.tintColor = color
-        
+        shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
         view.addSubview(shareButton)
-        
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
+            imageView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            imageView.heightAnchor.constraint(equalTo: view.widthAnchor),
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
             shareButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: interitemSpacing),
             shareButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
-        
-        shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
     }
     
     @objc private func shareButtonTapped() {
