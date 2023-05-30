@@ -8,15 +8,21 @@
 import Foundation
 
 /**
- The Cat struct represents a cat in the Cat Gallery app.
+ The Cat struct represents a cat and contains information about the cat's breed, categories, ID, image URL, width, and height. It is used to deserialize JSON data related to cats.
 
- It contains various properties that provide information about the cat, such as its breeds, categories, ID, URL, width, and height.
+ The struct includes the following properties:
 
- The Cat struct is Codable, meaning it can be encoded to and decoded from JSON format using the Codable protocol.
+ - breeds: An array of Breed objects representing the cat's breed.
+ However, it's worth noting that in most cases, the breeds property is not populated and remains empty. This is because the majority of cat instances do not have associated breed information available.
+ - categories: An optional array of Category objects representing the categories associated with the cat.
+ - id: A string representing the unique identifier of the cat.
+ - url: A string representing the URL of the cat's image.
+ - width: An integer representing the width of the cat's image.
+ - height: An integer representing the height of the cat's image.
+ 
+ It's important to highlight that due to the nature of the data source, the Cat struct mainly focuses on the image URL aspect of the cat's information. While the breeds and categories properties exist, they are often omitted or not provided in the data, resulting in empty or null values.
 
- The struct also includes nested structs, Breed and Category, which represent the breed information and category information of the cat, respectively. The Breed struct contains properties like weight, ID, name, temperament, origin, and various other characteristics of the breed. The Category struct contains properties for the ID and name of the category.
-
- This struct is designed to hold the data for a cat fetched from an external API and provide a structured representation of the cat's information within the Cat Gallery app.
+ The Cat struct is part of a larger data model and is used to retrieve and store information about cats, with an emphasis on the image URL aspect rather than detailed breed or category information.
  */
  
 
