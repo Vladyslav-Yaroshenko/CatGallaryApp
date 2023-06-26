@@ -23,6 +23,11 @@ The CatGalleryApp follows the MVP (Model-View-Presenter) architecture pattern.
 
 - URLSession: The app utilizes URLSession for downloading the cat images from the provided URLs.
 
+## Screenshots
+
+![photo_2023-06-26 18 36 00](https://github.com/Vladyslav-Yaroshenko/CatGallaryApp/assets/106316686/4efcd298-18e1-4cc0-b344-9658141527c0)
+
+
 ## Requirements
 
 - iOS 14.0 or later
